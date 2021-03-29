@@ -21,8 +21,19 @@ int main()
     {
         g[k[i]-1]=g[k[i]-1]+1;
     }
+    max = 0;
     for(i=0;i<max;i++)
     {
-        printf("%d",g[i]);
+        if(g[i]>max)
+        {
+            max = k[i];
+        }
+    }
+    for(i=0;i<max;i++)
+    {
+        if(g[i] == max)
+        {
+            printf("%d",i+1);
+        }
     }
 }

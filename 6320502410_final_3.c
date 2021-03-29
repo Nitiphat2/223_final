@@ -7,7 +7,7 @@ int main()
     {
         scanf("%d",&n[i]);
     }
-    printf("\n\n");
+    printf("\n");
     for(i=0;i<3;i++)
     {
         int g[n[i]][n[i]];
@@ -55,10 +55,12 @@ int main()
         }
         for(j=0;j<l;j++)
         {
-            if(a[j]==a[0])
+            if(a[j]!=a[0])
             {
-
+                check[i] = 1;
+                break;
             }
         }
+        printf("\n");
     }
 }

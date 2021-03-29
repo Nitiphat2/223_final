@@ -27,14 +27,15 @@ int main()
     {
         if(g[i]>max)
         {
-            max = k[i];
+            max = g[i];
         }
     }
     for(i=0;i<j;i++)
     {
         if(g[i] == max)
         {
-            printf("%d",i+1);
+            printf("%d ",i+1);
         }
     }
+    return 0;
 }

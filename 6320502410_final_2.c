@@ -21,4 +21,8 @@ int main()
     {
         g[k[i]-1]=g[k[i]-1]+1;
     }
+    for(i=0;i<max;i++)
+    {
+        printf("%d",g[i]);
+    }
 }

@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n[3];
+    int n[3],check[3]={0,0,0};
     int i,j,k,l,m;
     for(i=0;i<3;i++)
     {
@@ -18,25 +18,47 @@ int main()
                 scanf("%d",&g[j][k]);
             }
         }
-        int a[n[i]],b[n[i]],c[2];
-        for(j=0;j<n[i];j++)
+        l=n[i]+n[i]+2;
+        int a[l];
+        for(j=0;j<l;j++)
         {
             a[j]=0;
-            b[j]=0;
-            for(k=0;k<n[i];k++)
+            if(j<n[i])
             {
-               a[j] = a[j] + g[j][k];
-               b[j] = b[j] + g[k][j];
+                for(k=0; k<n[i]; k++)
+                {
+                    a[j] = a[j] + g[j][k];
+                }
+            }
+            else if(j<n[i]+n[i]&&j>=n[i])
+            {
+                for(k=0; k<n[i]; k++)
+                {
+                    a[j] = a[j] + g[k][j-n[i]];
+                }
+            }
+            else if(j<n[i]+n[i]+1&&j>=n[i]+n[i])
+            {
+                for(k=0; k<n[i]; k++)
+                {
+                    a[j] = a[j] + g[k][k];
+                }
+            }
+            else
+            {
+                m=n[i]-1;
+                for(k=n[i]-1; k>=0; k--)
+                {
+                    a[j] = a[j] + g[m-k][k];
+                }
             }
         }
-        c[0]=0;
-        c[1]=0;
-        l=n[i]-1;
-        for(k=0;k<n[i];k++)
+        for(j=0;j<l;j++)
         {
-            c[0] = c[0] + g[0+k][k];
-            c[1] = c[1] + g[l-k][k];
+            if(a[j]==a[0])
+            {
+
+            }
         }
-        printf("%d",c[1]);
     }
 }

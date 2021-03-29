@@ -3,11 +3,24 @@ int main()
 {
     int n,m;
     scanf("%d%d",&n,&m);
-    int i,j=1,k=m;
+    int i=0,j,k;
     n++;
-    while(n%10 != m)
+    while(i!=1)
     {
-        n++;
+        j=n;
+        while(j>1)
+        {
+            k=j%10;
+            if(k == m)
+            {
+                i=1;
+            }
+            j=j/10;
+        }
+        if(i==0)
+        {
+            n++;
+        }
     }
     printf("%d",n);
     return 0;

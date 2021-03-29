@@ -6,6 +6,9 @@ int main()
     for(i=0;i<3;i++)
     {
         scanf("%d",&n[i]);
+    }
+    for(i=0;i<3;i++)
+    {
         int g[n[i]][n[i]];
         for(j=0;j<n[i];j++)
         {

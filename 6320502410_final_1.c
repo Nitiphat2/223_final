@@ -6,7 +6,10 @@ int main()
     int i,j,k;
     while(n%10 != m)
     {
-        n=n+1;
-        if()
+        if(n%10 != m)
+        {
+            n=n+1;
+        }
     }
+    printf("%d",n);
 }

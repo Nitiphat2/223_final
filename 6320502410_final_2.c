@@ -21,15 +21,16 @@ int main()
     {
         g[k[i]-1]=g[k[i]-1]+1;
     }
+    j = max;
     max = 0;
-    for(i=0;i<max;i++)
+    for(i=0;i<j;i++)
     {
         if(g[i]>max)
         {
             max = k[i];
         }
     }
-    for(i=0;i<max;i++)
+    for(i=0;i<j;i++)
     {
         if(g[i] == max)
         {

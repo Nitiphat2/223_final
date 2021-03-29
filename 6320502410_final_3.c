@@ -28,7 +28,15 @@ int main()
                a[j] = a[j] + g[j][k];
                b[j] = b[j] + g[k][j];
             }
-            printf("%d %d\n",a[j],b[j]);
         }
+        c[0]=0;
+        c[1]=0;
+        l=n[i]-1;
+        for(k=0;k<n[i];k++)
+        {
+            c[0] = c[0] + g[0+k][k];
+            c[1] = c[1] + g[l-k][k];
+        }
+        printf("%d",c[1]);
     }
 }

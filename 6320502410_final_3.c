@@ -61,6 +61,14 @@ int main()
                 break;
             }
         }
+        if(check[i] == 0)
+        {
+            printf("no");
+        }
+        else
+        {
+            printf("yes");
+        }
         printf("\n");
     }
 }
